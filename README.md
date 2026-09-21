@@ -23,7 +23,9 @@ about to run, then executes it via the matching script.
 | Path | What it is |
 |---|---|
 | `AGENTS.md` | The contract the agent follows: pipeline, rules, stage → skill → script mapping |
-| `skills/` | Four playbooks: `rtl-from-spec`, `verify-rtl`, `synth-pnr`, `signoff-gds` |
+| `docs/agent-workflow.md` | How an agent behaves session-to-session: exit codes, `--json`, iteration discipline |
+| `docs/walkthrough.md` | Annotated end-to-end run of the counter example with real outputs |
+| `skills/` | Five playbooks: `rtl-from-spec`, `verify-rtl`, `synth-pnr`, `signoff-gds`, `debug-env` |
 | `scripts/` | Stdlib-only Python wrappers around the EDA tools |
 | `templates/` | `spec.template.md` and `design.yaml` for new designs |
 | `examples/counter/` | A complete worked example: spec → rtl → tb → GDS |

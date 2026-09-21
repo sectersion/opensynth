@@ -28,6 +28,12 @@ Bracketed items are skills in `skills/`. Read the relevant skill before starting
 
 `<dir>` is the design directory (e.g. `examples/counter`), which must contain `design.yaml`.
 
+## For onboarding and failure patterns
+
+- `docs/agent-workflow.md` — how to behave: exit-code semantics, `--json` payloads, iteration discipline.
+- `docs/walkthrough.md` — a successful full run of the counter example, stage by stage, with real outputs.
+- `skills/debug-env` — read when any script exits 2 or hangs; environment problems are setup, not design.
+
 ## Non-negotiable rules
 
 - **Scripts are the only path to the tools.** Never run verilator/iverilog/ORFS make directly.
