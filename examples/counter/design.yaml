@@ -1,0 +1,18 @@
+# opensynth design spec
+# Maps 1:1 onto OpenROAD-flow-scripts config.mk variables (see skills/synth-pnr).
+
+design:
+  name: counter              # ORFS DESIGN_NAME
+  platform: sky130hd         # ORFS PLATFORM
+  rtl_sources:
+    - rtl/counter.v          # relative to design dir
+  top_module: counter        # informational; must match design.name
+
+timing:
+  clock_period_ns: 10        # ORFS CLOCK_PERIOD
+  clock_port: clk
+
+area:
+  core_utilization: 45       # percent; ORFS CORE_UTILIZATION
+  core_aspect_ratio: 1
+  core_margin: 2

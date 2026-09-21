@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  selfcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile-check scripts
+        run: |
+          python -m compileall scripts tests
+
+      - name: Selfcheck (docker-backed)
+        run: python tests/test_scripts.py
+        # Docker is preinstalled on ubuntu runners; the hdlc/verilator and
+        # hdlc/iverilog images (~ a few hundred MB) are pulled on first use.

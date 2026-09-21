@@ -1,0 +1,16 @@
+# Fixture: testbench prints FAIL -> sim.py must exit 1
+design:
+  name: simfail
+  platform: sky130hd
+  rtl_sources:
+    - rtl/simfail.v
+  top_module: simfail
+
+timing:
+  clock_period_ns: 10
+  clock_port: clk
+
+area:
+  core_utilization: 45
+  core_aspect_ratio: 1
+  core_margin: 2

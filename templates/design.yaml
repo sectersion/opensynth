@@ -1,0 +1,20 @@
+# opensynth design spec
+# Copy to <design_dir>/design.yaml and edit. Maps 1:1 onto OpenROAD-flow-scripts
+# config.mk variables (see skills/synth-pnr).
+
+design:
+  name: mydesign             # ORFS DESIGN_NAME; must equal top module name
+  platform: sky130hd         # ORFS PLATFORM
+  rtl_sources:
+    - rtl/mydesign.v         # relative to design dir; list every RTL file
+  top_module: mydesign       # informational; must match design.name
+
+timing:
+  clock_period_ns: 10        # ORFS SDC clock period (10ns = 100MHz)
+  clock_port: clk
+
+area:
+  core_utilization: 45       # percent; ORFS CORE_UTILIZATION (35-55 sensible)
+  core_aspect_ratio: 1
+  core_margin: 2
+  # place_density: 0.60      # optional; sky130hd default 0.60

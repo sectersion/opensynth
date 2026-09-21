@@ -1,0 +1,16 @@
+# Fixture: no tb/ directory -> sim.py must exit 2 (setup error)
+design:
+  name: notb
+  platform: sky130hd
+  rtl_sources:
+    - rtl/notb.v
+  top_module: notb
+
+timing:
+  clock_period_ns: 10
+  clock_port: clk
+
+area:
+  core_utilization: 45
+  core_aspect_ratio: 1
+  core_margin: 2

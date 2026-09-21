@@ -1,0 +1,16 @@
+# Fixture: RTL that trips Verilator -Wall warnings -> lint.py must exit 1
+design:
+  name: lintfail
+  platform: sky130hd
+  rtl_sources:
+    - rtl/lintfail.v
+  top_module: lintfail
+
+timing:
+  clock_period_ns: 10
+  clock_port: clk
+
+area:
+  core_utilization: 45
+  core_aspect_ratio: 1
+  core_margin: 2
